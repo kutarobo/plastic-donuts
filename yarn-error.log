@@ -1,0 +1,61 @@
+Arguments: 
+  /Users/gyedusig/.nvm/versions/node/v18.20.5/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js
+
+PATH: 
+  /Users/gyedusig/.rbenv/shims:/Users/gyedusig/.rbenv/bin:/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/gyedusig/.nvm/versions/node/v18.20.5/bin:/Users/gyedusig/.rbenv/shims:/Users/gyedusig/.rbenv/bin:/opt/homebrew/bin:/Users/gyedusig/.nvm/versions/node/v18.17.0/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.20.5
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+npm manifest: 
+  {
+    "name": "plastic-donuts",
+    "version": "1.0.0",
+    "private": true,
+    "description": "plastic-donuts",
+    "author": "kutarobo",
+    "keywords": [
+      "gatsby"
+    ],
+    "scripts": {
+      "develop": "gatsby develop",
+      "start": "gatsby develop",
+      "build": "gatsby build",
+      "serve": "gatsby serve",
+      "clean": "gatsby clean",
+      "typecheck": "tsc --noEmit"
+    },
+    "dependencies": {
+      "gatsby": "^5.14.0",
+      "gatsby-plugin-image": "^3.14.0",
+      "gatsby-plugin-manifest": "^5.14.0",
+      "gatsby-plugin-sharp": "^5.14.0",
+      "gatsby-source-filesystem": "^5.14.0",
+      "gatsby-transformer-remark": "^6.14.0",
+      "gatsby-transformer-sharp": "^5.14.0",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+      "@types/node": "^20.11.19",
+      "@types/react": "^18.2.55",
+      "@types/react-dom": "^18.2.19",
+      "typescript": "^5.3.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

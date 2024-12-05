@@ -28,6 +28,7 @@ const config: GatsbyConfig = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-graphql-codegen`, // markdown frontmatter 절 type 자동 생성
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

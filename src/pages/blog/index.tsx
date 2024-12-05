@@ -61,7 +61,7 @@ export const pageQuery = graphql`
 */
 
 export const pageQuery = graphql`
-  query {
+  query TestMarkdown {
     site {
       siteMetadata {
         title
