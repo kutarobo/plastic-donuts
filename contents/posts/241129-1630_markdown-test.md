@@ -1,8 +1,9 @@
 ---
 title: markdown test
-date: "2024-11-29T16:31:00.000Z"
+createdDate: "2024-11-29T16:31:00.000Z"
+updatedDate: "2024-11-29T16:31:00.000Z"
 description: 마크다운 연동 테스트 입니다.
-slug: test
+categories: test
 ---
 
 # 이것은 마크다운 연동 테스트 문서입니다.
