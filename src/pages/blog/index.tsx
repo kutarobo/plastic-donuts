@@ -32,7 +32,7 @@ export default function BlogPostTemplate({
                 {title}
               </Link>
             </h3>
-            <small>{node.frontmatter.date}</small>
+            <small>{node.frontmatter.createdDate}</small>
             <p
               dangerouslySetInnerHTML={{
                 __html: node.frontmatter.description || node.excerpt,
@@ -51,8 +51,8 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        slug
+        createdDate(formatString: "MMMM DD, YYYY")
+        categories
         title
       }
     }
