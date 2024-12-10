@@ -435,6 +435,9 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   slug?: Maybe<Scalars['String']>;
+  createdDate?: Maybe<Scalars['String']>;
+  updatedDate?: Maybe<Scalars['String']>;
+  categories?: Maybe<Scalars['String']>;
 };
 
 
@@ -1046,6 +1049,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: InputMaybe<DateQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
   slug?: InputMaybe<StringQueryOperatorInput>;
+  createdDate?: InputMaybe<StringQueryOperatorInput>;
+  updatedDate?: InputMaybe<StringQueryOperatorInput>;
+  categories?: InputMaybe<StringQueryOperatorInput>;
 };
 
 export type JsonQueryOperatorInput = {
@@ -1295,6 +1301,9 @@ export type MarkdownRemarkFrontmatterFieldSelector = {
   date?: InputMaybe<FieldSelectorEnum>;
   description?: InputMaybe<FieldSelectorEnum>;
   slug?: InputMaybe<FieldSelectorEnum>;
+  createdDate?: InputMaybe<FieldSelectorEnum>;
+  updatedDate?: InputMaybe<FieldSelectorEnum>;
+  categories?: InputMaybe<FieldSelectorEnum>;
 };
 
 export type MarkdownHeadingFieldSelector = {
@@ -1541,6 +1550,9 @@ export type MarkdownRemarkFrontmatterSortInput = {
   date?: InputMaybe<SortOrderEnum>;
   description?: InputMaybe<SortOrderEnum>;
   slug?: InputMaybe<SortOrderEnum>;
+  createdDate?: InputMaybe<SortOrderEnum>;
+  updatedDate?: InputMaybe<SortOrderEnum>;
+  categories?: InputMaybe<SortOrderEnum>;
 };
 
 export type MarkdownHeadingSortInput = {
