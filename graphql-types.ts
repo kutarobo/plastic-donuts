@@ -432,16 +432,22 @@ export type MarkdownRemarkTableOfContentsArgs = {
 
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
-  date?: Maybe<Scalars['Date']>;
+  createdDate?: Maybe<Scalars['Date']>;
+  updatedDate?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
-  slug?: Maybe<Scalars['String']>;
-  createdDate?: Maybe<Scalars['String']>;
-  updatedDate?: Maybe<Scalars['String']>;
   categories?: Maybe<Scalars['String']>;
 };
 
 
-export type MarkdownRemarkFrontmatterDateArgs = {
+export type MarkdownRemarkFrontmatterCreatedDateArgs = {
+  formatString?: InputMaybe<Scalars['String']>;
+  fromNow?: InputMaybe<Scalars['Boolean']>;
+  difference?: InputMaybe<Scalars['String']>;
+  locale?: InputMaybe<Scalars['String']>;
+};
+
+
+export type MarkdownRemarkFrontmatterUpdatedDateArgs = {
   formatString?: InputMaybe<Scalars['String']>;
   fromNow?: InputMaybe<Scalars['Boolean']>;
   difference?: InputMaybe<Scalars['String']>;
@@ -1046,11 +1052,9 @@ export type MarkdownRemarkFilterInput = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: InputMaybe<StringQueryOperatorInput>;
-  date?: InputMaybe<DateQueryOperatorInput>;
+  createdDate?: InputMaybe<DateQueryOperatorInput>;
+  updatedDate?: InputMaybe<DateQueryOperatorInput>;
   description?: InputMaybe<StringQueryOperatorInput>;
-  slug?: InputMaybe<StringQueryOperatorInput>;
-  createdDate?: InputMaybe<StringQueryOperatorInput>;
-  updatedDate?: InputMaybe<StringQueryOperatorInput>;
   categories?: InputMaybe<StringQueryOperatorInput>;
 };
 
@@ -1298,11 +1302,9 @@ export type MarkdownRemarkFieldSelector = {
 
 export type MarkdownRemarkFrontmatterFieldSelector = {
   title?: InputMaybe<FieldSelectorEnum>;
-  date?: InputMaybe<FieldSelectorEnum>;
-  description?: InputMaybe<FieldSelectorEnum>;
-  slug?: InputMaybe<FieldSelectorEnum>;
   createdDate?: InputMaybe<FieldSelectorEnum>;
   updatedDate?: InputMaybe<FieldSelectorEnum>;
+  description?: InputMaybe<FieldSelectorEnum>;
   categories?: InputMaybe<FieldSelectorEnum>;
 };
 
@@ -1547,11 +1549,9 @@ export type MarkdownRemarkSortInput = {
 
 export type MarkdownRemarkFrontmatterSortInput = {
   title?: InputMaybe<SortOrderEnum>;
-  date?: InputMaybe<SortOrderEnum>;
-  description?: InputMaybe<SortOrderEnum>;
-  slug?: InputMaybe<SortOrderEnum>;
   createdDate?: InputMaybe<SortOrderEnum>;
   updatedDate?: InputMaybe<SortOrderEnum>;
+  description?: InputMaybe<SortOrderEnum>;
   categories?: InputMaybe<SortOrderEnum>;
 };
 
@@ -2686,7 +2686,7 @@ export type ImageSharpGroupConnectionGroupArgs = {
 export type TestMarkdownQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type TestMarkdownQuery = { site?: { siteMetadata?: { title?: string | null } | null } | null, allMarkdownRemark: { edges: Array<{ node: { excerpt?: string | null, frontmatter?: { date?: any | null, title?: string | null, description?: string | null } | null } }> } };
+export type TestMarkdownQuery = { site?: { siteMetadata?: { title?: string | null } | null } | null, allMarkdownRemark: { edges: Array<{ node: { excerpt?: string | null, frontmatter?: { createdDate?: any | null, title?: string | null, description?: string | null } | null } }> } };
 
 export type GatsbyImageSharpFixedFragment = { base64?: string | null, width: number, height: number, src: string, srcSet: string };
 

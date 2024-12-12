@@ -68,13 +68,16 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: [{ frontmatter: { date: ASC } }, { frontmatter: { title: ASC } }]
+      sort: [
+        { frontmatter: { createdDate: ASC } }
+        { frontmatter: { title: ASC } }
+      ]
     ) {
       edges {
         node {
           excerpt
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            createdDate(formatString: "MMMM DD, YYYY")
             title
             description
           }
