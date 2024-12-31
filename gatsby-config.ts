@@ -9,6 +9,7 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
+
   plugins: [
     `gatsby-plugin-image`,
     {
@@ -40,9 +41,10 @@ const config: GatsbyConfig = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/plastic-donut-dark.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 };
 
