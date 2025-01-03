@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["codegen"]
+  "cSpell.words": ["codegen"],
+  "prettier.jsxSingleQuote": true
 }
