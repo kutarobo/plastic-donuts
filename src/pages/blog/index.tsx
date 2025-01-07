@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Link, graphql } from "gatsby";
+import * as React from 'react';
+import { Link, graphql } from 'gatsby';
 
 interface Props {
   data: {
@@ -27,7 +27,7 @@ export default function BlogPostTemplate({
             <h3>
               <Link
                 style={{ boxShadow: `none` }}
-                to={/*node.fields.slug*/ "haha"}
+                to={/*node.fields.slug*/ 'haha'}
               >
                 {title}
               </Link>
