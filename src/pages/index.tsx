@@ -6,7 +6,7 @@ import '../styles/global.scss';
 
 const pageStyles = {
   color: '#232129',
-  padding: 96,
+  padding: 0,
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
 };
 

@@ -44,6 +44,17 @@ const config: GatsbyConfig = {
         icon: `src/images/plastic-donut-dark.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
+        // The values for each key in this example are the defaults the plugin uses.
+        sourceMap: true,
+        autoLabel: 'dev-only',
+        labelFormat: `[local]`,
+        cssPropOptimization: true,
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
   ],

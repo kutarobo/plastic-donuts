@@ -10,15 +10,21 @@ const styles = {
     height: '3rem',
     borderBottom: '1px solid lightGray',
     display: 'grid',
+    gridTemplateColumns: '3rem auto 3rem',
+    padding: '0.2rem',
+  },
+  headerItem: {
+    alignContent: 'center',
+    justifySelf: 'center',
   },
 };
 export default function Layouts({ children }: { children: ReactNode }) {
   return (
     <div style={styles.wrapper}>
       <div style={styles.header}>
-        <div>백버튼</div>
-        <div>타이틀 영역</div>
-        <div>햄부기버튼</div>
+        <div style={styles.headerItem}>백버튼</div>
+        <div style={styles.headerItem}>타이틀 영역</div>
+        <div style={styles.headerItem}>햄부기버튼</div>
       </div>
       <div>{children}</div>
     </div>
