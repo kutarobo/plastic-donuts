@@ -1,5 +1,6 @@
 import { graphql } from 'gatsby';
 import React, { ReactNode } from 'react';
+import { Grid, Typography } from '../index';
 
 const styles = {
   wrapper: {
@@ -20,14 +21,16 @@ const styles = {
 };
 export default function Layouts({ children }: { children: ReactNode }) {
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.header}>
-        <div style={styles.headerItem}>백버튼</div>
-        <div style={styles.headerItem}>타이틀 영역</div>
-        <div style={styles.headerItem}>햄부기버튼</div>
-      </div>
-      <div>{children}</div>
-    </div>
+    <Grid style={styles.wrapper}>
+      <Grid style={styles.header}>
+        <Grid style={styles.headerItem}>백버튼</Grid>
+        <Grid style={styles.headerItem}>
+          <Typography>타이틀 영역</Typography>
+        </Grid>
+        <Grid style={styles.headerItem}>햄부기버튼</Grid>
+      </Grid>
+      <Grid>{children}</Grid>
+    </Grid>
   );
 }
 

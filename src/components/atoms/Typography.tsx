@@ -6,7 +6,7 @@ import {
   type MouseEventHandler,
 } from 'react';
 import styled from '@emotion/styled';
-import type { Style } from '../types';
+import type { Style } from '../../types';
 
 type ComponentType = keyof HTMLElementTagNameMap;
 

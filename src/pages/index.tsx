@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
-import Layouts from '../components/Layouts';
+import Layouts from '../components/layouts/Layouts';
 import Header from '../components/Header';
 import '../styles/global.scss';
 

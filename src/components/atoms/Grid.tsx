@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import type { Style } from '../types';
+import type { Style } from '../../types';
 
 interface Props extends Style {
   container?: boolean;
