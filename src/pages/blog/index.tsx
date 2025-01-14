@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { Link, graphql } from 'gatsby';
+import { HeadFC, Link, graphql } from 'gatsby';
+import Layouts from '../../components/layouts/Layouts';
+import Header from '../../components/Header';
 
 interface Props {
   data: {
@@ -18,47 +20,41 @@ export default function BlogPostTemplate({
   const siteTitle = data.site.siteMetadata.title;
   const posts = data.allMarkdownRemark.edges;
 
+  const BlogLists = () => {
+    return posts.map(({ node }: { node: any }) => {
+      const title = node.frontmatter.title; //|| node.fields.slug;
+      return (
+        <div key={/*node.fields.slug*/ Math.random()}>
+          <h3>
+            <Link
+              style={{ boxShadow: `none` }}
+              to={/*node.fields.slug*/ 'haha'}
+            >
+              {title}
+            </Link>
+          </h3>
+          <small>{node.frontmatter.createdDate}</small>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: node.frontmatter.description || node.excerpt,
+            }}
+          />
+        </div>
+      );
+    });
+  };
+
   return (
-    <div>
-      {posts.map(({ node }: { node: any }) => {
-        const title = node.frontmatter.title; //|| node.fields.slug;
-        return (
-          <div key={/*node.fields.slug*/ Math.random()}>
-            <h3>
-              <Link
-                style={{ boxShadow: `none` }}
-                to={/*node.fields.slug*/ 'haha'}
-              >
-                {title}
-              </Link>
-            </h3>
-            <small>{node.frontmatter.createdDate}</small>
-            <p
-              dangerouslySetInnerHTML={{
-                __html: node.frontmatter.description || node.excerpt,
-              }}
-            />
-          </div>
-        );
-      })}
-    </div>
+    <Layouts>
+      <div>
+        <BlogLists />
+        <BlogLists />
+        <BlogLists />
+        <BlogLists />
+      </div>
+    </Layouts>
   );
 }
-
-/*
-export const pageQuery = graphql`
-  query ($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        createdDate(formatString: "MMMM DD, YYYY")
-        categories
-        title
-      }
-    }
-  }
-`;
-*/
 
 export const pageQuery = graphql`
   query TestMarkdown {
@@ -86,6 +82,7 @@ export const pageQuery = graphql`
     }
   }
 `;
-//   fields {
-//     slug
-//   }
+
+export const Head: HeadFC = () => {
+  return <Header title="Home" />;
+};

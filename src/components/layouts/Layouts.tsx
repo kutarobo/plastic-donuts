@@ -1,6 +1,12 @@
 import { graphql } from 'gatsby';
 import React, { ReactNode } from 'react';
 import { Grid, Typography } from '../index';
+import type { Style, TSerializedStyle } from '../../types';
+import { css } from '@emotion/react';
+
+export interface ILayouts extends Style {
+  children: ReactNode;
+}
 
 const styles = {
   wrapper: {
@@ -18,8 +24,14 @@ const styles = {
     alignContent: 'center',
     justifySelf: 'center',
   },
+  contentsArea: (sx?: TSerializedStyle) => css`
+    padding: 1rem;
+    height: calc(100dvh - 3rem);
+
+    ${sx};
+  `,
 };
-export default function Layouts({ children }: { children: ReactNode }) {
+export default function Layouts({ children, sx }: ILayouts) {
   return (
     <Grid style={styles.wrapper}>
       <Grid style={styles.header}>
@@ -29,7 +41,7 @@ export default function Layouts({ children }: { children: ReactNode }) {
         </Grid>
         <Grid style={styles.headerItem}>햄부기버튼</Grid>
       </Grid>
-      <Grid>{children}</Grid>
+      <Grid sx={styles.contentsArea(sx)}>{children}</Grid>
     </Grid>
   );
 }

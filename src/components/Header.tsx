@@ -5,9 +5,10 @@ interface IHeader {
 }
 
 const Header = ({ title }: IHeader) => {
+  const subTitle = title ? `:: ${title}` : '';
   return (
     <>
-      <title>{title}plastic donuts</title>
+      <title>Plastic Donuts {subTitle}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </>
   );
