@@ -2688,6 +2688,11 @@ export type TestMarkdownQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type TestMarkdownQuery = { site?: { siteMetadata?: { title?: string | null } | null } | null, allMarkdownRemark: { edges: Array<{ node: { excerpt?: string | null, frontmatter?: { createdDate?: any | null, title?: string | null, description?: string | null } | null } }> } };
 
+export type LeftMenuQueryQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type LeftMenuQueryQuery = { site?: { id: string, siteMetadata?: { title?: string | null, description?: string | null, siteUrl?: string | null } | null } | null, allSite: { edges: Array<{ node: { id: string } }> }, allMarkdownRemark: { edges: Array<{ node: { id: string, frontmatter?: { categories?: string | null, createdDate?: any | null, description?: string | null, title?: string | null, updatedDate?: any | null } | null } }> } };
+
 export type GatsbyImageSharpFixedFragment = { base64?: string | null, width: number, height: number, src: string, srcSet: string };
 
 export type GatsbyImageSharpFixed_TracedSvgFragment = { tracedSVG?: string | null, width: number, height: number, src: string, srcSet: string };
